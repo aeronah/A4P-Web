@@ -5,9 +5,6 @@ body {
 }
 .buttons-link {
     height: 40px;
-}
-
-.buttons-link a {
     color:#b80807;
     border-bottom: 1px solid transparent;
     text-decoration: none;
