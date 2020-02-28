@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 * {
   font-family: "Russo One" !important;
   background: #efefef;
@@ -36,28 +35,3 @@ button:hover {
   text-align: center;
   line-height: 1;
 }
-=======
-*{
-    font-family: 'Russo One' !important;
-    background:#efefef;
-    align-content: center; 
-}
-
-.btn-default{
-    height:100%;
-    width:100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color:transparent;
-    border-color:#b80807;
-    border-style:solid;
-    border-width: 4px;
-    border-radius: 15px;
-    font-size: 30pt;
-    color:#b80807;
-}
-
-
-
-
->>>>>>> fed7c7fa8847265f22f834651b5ecbb530381a20
