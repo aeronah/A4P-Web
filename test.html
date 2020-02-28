@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css"></link>
+
     <link rel="stylesheet" type="text/css" href="./styles/a4p.css" />
     <link rel="stylesheet" type="text/css" href="./styles/russo-one.css" />
   </head>
 
   <body>
-    <div class="header">A4P</div>
-    <!--<button class="btn-default">START</button>-->
+    <div class="container-fluid">
+      <div class="row align-items-start">
+        <div class="col"></div>
+        <div class="col-8">
+          <div class="header">Game</br>In</br>Progress</div>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col"></div>
+        <div class="col-8">
+          <button
+            type="button"
+            id="home_start_btn"
+            class="btn-default"
+            onClick="onHomeStartBtnClick()"
+          >
+            Start
+          </button>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col"></div>
+        <div class="col-8">
+          <button
+            type="button"
+            id="home_control_btn"
+            class="btn-default"
+            onClick="onHomeControlBtnClick()"
+          >
+            Control
+          </button>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row align-items-end">
+        <div class="col"></div>
+        <div class="col-8">
+          <button
+            type="button"
+            id="home_configurtion_btn"
+            class="btn-default"
+            onClick="onHomeConfigurationBtnClick()"
+          >
+            Configuration
+          </button>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
   </body>
 </html>
