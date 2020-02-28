@@ -3,17 +3,37 @@
     <head>
         <meta charset="utf-8" />
         <title>Aim4Pass</title> 
-        <link rel="stylesheet" href="./styles/styles.css"></link>
-        <script async arc='./javascript/index.js'></script>
+        <link rel="stylesheet" href="./styles/bootstrap.min.css"></link>
+        <link rel="stylesheet" type="text/css" href="./styles/a4p.css"></link>
+        <link rel="stylesheet" type="text/css" href="./styles/russo-one.css"></link>
+        <script type="text/javascript" src="./javascript/index.js"></script>
     </head>
     <body>
-        <div class="container">
-            <div class="header">
-                <div>Game in Progress</div>
+        <div class="container-fluid">
+            <div class="row align-items-start header">
+                <div class="col">
+                </div>
+                <div class="col-6">
+                    <div>Game in Progress</div>
+                </div>
+                <div class="col">
+                </div>
             </div>
-            <div class="buttons">
-                <div class="buttons-link" id="start_stop_btn" onClick="onStartStopBtnClick()"> 
-                    Stop
+            <div class="row align-items-center">
+                <div class="col">
+                </div>
+                <div class="col-6">
+                    <button type="button" class="btn-default btn-stop" onClick="onStartStopBtnClick()">Stop</button>
+                </div>
+                <div class="col">
+                </div>
+            </div>
+            <div class="row align-items-end">
+                <div class="col">
+                </div>
+                <div class="col-6">
+                </div>
+                <div class="col">
                 </div>
             </div>
         </div>
