@@ -3,23 +3,41 @@
     <head>
         <meta charset="utf-8" />
         <title>Aim4Pass</title> 
-        <link rel="stylesheet" href="./styles/styles.css"></link>
-        <script async arc='./javascript/index.js'></script>
+        <link rel="stylesheet" href="./styles/bootstrap.min.css"></link>
+        <link rel="stylesheet" type="text/css" href="./styles/a4p.css"></link>
+        <link rel="stylesheet" type="text/css" href="./styles/russo-one.css"></link>
+        <script type="text/javascript" src="./javascript/index.js"></script>
     </head>
     <body>
-        <div class="container">
-            <div class="header">
-                <div>Game in Progress</div>
+        <div class="container-fluid">
+            <div class="row align-items-start">
+                <div class="col">
+                </div>
+                <div class="col-8">
+                    <div class="header">Control</div>
+                </div>
+                <div class="col">
+                </div>
+              </div>
+            <div class="row align-items-center">
+                <div class="col">
+                </div>
+                <div class="col-8">
+                    <button type="button" id="control_launch_btn" class="btn-default" onClick="onControlLaunchBtnClick()">Launch</button>
+                </div>
+                <div class="col">
+                </div>
             </div>
-            <div class="buttons">
-                <div class="buttons-link" id="control_launch_btn" onClick="onControlLaunchBtnClick()"> 
-                    Launch
+            <div class="row align-items-end">
+                <div class="col">
                 </div>
-                <div class="buttons-link" id="control_left_btn" onClick="onControlLeftBtnClick()"> 
-                    <!-- Add arrow -->
+                <div class="col-4">
+                    <button type="button" id="control_left_btn" class="btn-default" onClick="onControlLeftBtnClick()"><</button>
                 </div>
-                <div class="buttons-link" id="control_right_btn" onClick="onControlRightBtnClick()"> 
-                    <!-- Add arrow -->
+                <div class="col-4">
+                    <button type="button" id="control_right_btn" class="btn-default" onClick="onControlRightBtnClick()">></button>
+                </div>
+                <div class="col">
                 </div>
             </div>
         </div>
