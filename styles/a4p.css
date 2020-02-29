@@ -5,18 +5,18 @@
 }
 
 .btn-default {
-  height: 65px;
+  height: 150px;
   width: 100%;
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: transparent;
   border-color: #b80807;
   border-style: solid;
-  border-width: 3px;
+  border-width: 6px;
   border-radius: 15px;
-  font-size: 18pt;
+  font-size: 50pt;
   color: #b80807;
-  margin-bottom: 35px;
+  margin-bottom: 70px;
 }
 
 button:hover {
@@ -27,11 +27,11 @@ button:hover {
 .header {
   color: #b80807;
   background-color: transparent;
-  font-size: 40pt;
-  border-bottom: 3px solid #b80807;
-  margin-top: 100px;
-  margin-bottom: 40px;
-  padding-bottom: 10px;
+  font-size: 68pt;
+  border-bottom: 5px solid #b80807;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  padding-bottom: 40px;
   text-align: center;
   line-height: 1;
 }
