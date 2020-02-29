@@ -6,6 +6,9 @@
         <link rel="stylesheet" href="./styles/bootstrap.min.css"></link>
         <link rel="stylesheet" type="text/css" href="./styles/a4p.css"></link>
         <link rel="stylesheet" type="text/css" href="./styles/russo-one.css"></link>
+        <script type="text/javascript" src="./javascript/jquery-3.4.1.js"></script>
+        <script type="text/javascript" src="./javascript/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="./javascript/bootstrap.js"></script>
         <script type="text/javascript" src="./javascript/index.js"></script>
     </head>
     <body>
@@ -23,17 +26,15 @@
                 <div class="col">
                 </div>
                 <div class="col-7">
-                    <div>Shots per Session</div>
+                    <div>Passes per Session</div>
                 </div>
                 <div class="col-1">
                     <div class="dropdown">
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                          Dropdown button
-                        </button>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Link 1</a>
-                          <a class="dropdown-item" href="#">Link 2</a>
-                          <a class="dropdown-item" href="#">Link 3</a>
+                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a id="number_shots_5" class="dropdown-item">5</a>
+                            <a id="number_shots_10" class="dropdown-item">10</a>
+                            <a id="number_shots_15" class="dropdown-item">15</a>
                         </div>
                     </div>
                 </div>
@@ -47,7 +48,14 @@
                     <div>Difficulty</div>
                 </div>
                 <div class="col-1">
-                    <div id="difficulty_label">5</div>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a id="difficulty_easy" class="dropdown-item">Easy</a>
+                            <a id="difficulty_medium" class="dropdown-item">Medium</a>
+                            <a id="difficulty_hard" class="dropdown-item">Hard</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col">
                 </div>
