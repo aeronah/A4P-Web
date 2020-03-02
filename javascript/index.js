@@ -30,3 +30,14 @@ function onControlLeftBtnClick() {
 function onControlRightBtnClick() {
     // Add MQTT communication
 }
+
+//Configuration Page
+
+
+//Training Page
+
+$('.dropdown-item').on('click',  function(){
+    var btnObj = $(this).parent().siblings('button');
+    $(btnObj).text($(this).text());
+    $(btnObj).val($(this).text());
+});

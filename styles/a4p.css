@@ -19,6 +19,17 @@
   margin-bottom: 70px;
 }
 
+.btn-back {
+    height: 90px;
+    width: 90px;
+    line-height: 0;
+    margin-top: 10px;
+    background-color: transparent;
+    border-style: none;
+    font-size: 60pt;
+    color: #b80807;
+  }
+
 button:hover {
   background-color: #b80807;
   color: #efefef;
