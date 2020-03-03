@@ -82,12 +82,10 @@ button:hover {
 
 #training_save_btn {
     margin-top: 400px;
-    margin-left: 50px;
-    margin-right: 50px;
+    width: 90%;
 }
 #scoreboard_next_btn {
     margin-top: 20px;
-    margin-left: 20px;
 }
 
 #score_percent_label {
