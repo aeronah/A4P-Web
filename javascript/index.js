@@ -1,6 +1,10 @@
 // Home Page
 function onHomeStartBtnClick () {
     location.href='start.html';
+    alert("START");
+    message = new Paho.MQTT.Message("START");
+    message.destinationName = "topic/A4P";
+    client.send(message);
 }
 
 function onHomeControlBtnClick () {
@@ -15,7 +19,7 @@ function onHomeConfigurationBtnClick () {
 
 function onStartStopBtnClick() {
     location.href='home.html';
-    alert("clicked");
+    alert("STOP");
     message = new Paho.MQTT.Message("STOP");
     message.destinationName = "topic/A4P";
     client.send(message);
@@ -28,22 +32,22 @@ function onControlBackBtnClick() {
 }
 
 function onControlLaunchBtnClick() {
-    alert("clicked");
+    alert("LAUNCH");
     message = new Paho.MQTT.Message("LAUNCH");
     message.destinationName = "topic/A4P";
     client.send(message);
 }
 
 function onControlLeftBtnClick() {
-    alert("clicked");
-    message = new Paho.MQTT.Message("STEPRIGHT");
+    alert("STEPLEFT");
+    message = new Paho.MQTT.Message("STEPLEFT");
     message.destinationName = "topic/A4P";
     client.send(message);
 }
 
 function onControlRightBtnClick() {
-    alert("clicked");
-    message = new Paho.MQTT.Message("STEPLEFT");
+    alert("STEPRIGHT");
+    message = new Paho.MQTT.Message("STEPRIGHT");
     message.destinationName = "topic/A4P";
     client.send(message);
 }
@@ -52,7 +56,6 @@ function onControlRightBtnClick() {
 function onScoreboardNextBtnClick() {
     location.href='home.html';
 }
-
 
 //Configuration Page
 function onConfigurationBtnClick() {
@@ -85,49 +88,16 @@ $('.dropdown-item').on('click',  function(){
 
 function onTrainingSaveBtnClick() {
     location.href='home.html';
-    alert("clicked");
+    alert(document.getElementById("number-passes").value);
+    alert(document.getElementById("difficulty").value);
     message = new Paho.MQTT.Message(document.getElementById("number-passes").value);
     message.destinationName = "topic/A4P/PPS";
     client.send(message);
-    alert("clicked");
-    message = new Paho.MQTT.Message(ocument.getElementById("difficulty").value);
+    message = new Paho.MQTT.Message(document.getElementById("difficulty").value);
     message.destinationName = "topic/A4P/DIFFICULTY";
     client.send(message);
     //not sure if this is correct
     //note that the value could be blank (if nothing is selected)
-}
-
-//Launcher Page
-function onLauncherBackBtnClick() {
-    location.href='configuration.html';
-}
-
-function onLauncherRUNBtnClick() {
-    alert("clicked");
-    message = new Paho.MQTT.Message("LRUN");
-    message.destinationName = "topic/A4P/LAUNCHER";
-    client.send(message);
-}
-
-function onLauncherUpBtnClick() {
-    alert("clicked");
-    message = new Paho.MQTT.Message("LSU");
-    message.destinationName = "topic/A4P/LAUNCHER";
-    client.send(message);
-}
-
-function onLauncherDownBtnClick() {
-    alert("clicked");
-    message = new Paho.MQTT.Message("LSD");
-    message.destinationName = "topic/A4P/LAUNCHER";
-    client.send(message);
-}
-
-function onLauncherStopBtnClick() {
-    alert("clicked");
-    message = new Paho.MQTT.Message("LSTOP");
-    message.destinationName = "topic/A4P/LAUNCHER";
-    client.send(message);
 }
 
 //Dispenser Page
@@ -136,36 +106,36 @@ function onDispenserBackBtnClick() {
 }
 
 function onDispenserRunBtnClick() {
-    alert("clicked");
+    alert("DRUN");
     message = new Paho.MQTT.Message("DRUN");
     message.destinationName = "topic/A4P/DISPENSER";
     client.send(message);
 }
 
 function onDispenserStepBtnClick() {
-    alert("clicked");
+    alert("DSTEP");
     message = new Paho.MQTT.Message("DSTEP");
     message.destinationName = "topic/A4P/DISPENSER";
     client.send(message);
 }
 
 function onDispenserCWBtnClick() {
-    alert("clicked");
+    alert("DCW");
     message = new Paho.MQTT.Message("DCW");
     message.destinationName = "topic/A4P/DISPENSER";
     client.send(message);
 }
 
 function onDispenserCCWBtnClick() {
-    alert("clicked");
+    alert("DCCW");
     message = new Paho.MQTT.Message("DCCW");
     message.destinationName = "topic/A4P/DISPENSER";
     client.send(message);
 }
 
 function onDispenserStopBtnClick() {
-    alert("clicked");
-    message = new Paho.MQTT.Message("DSTRP");
+    alert("DSTOP");
+    message = new Paho.MQTT.Message("DSTOP");
     message.destinationName = "topic/A4P/DISPENSER";
     client.send(message);
 }
@@ -176,36 +146,69 @@ function onRotationBackBtnClick() {
 }
 
 function onRotationRunBtnClick() {
-    alert("clicked");
+    alert("RRUN");
     message = new Paho.MQTT.Message("RRUN");
     message.destinationName = "topic/A4P/DISPENSER";
     client.send(message);
 }
 
 function onRotationStepBtnClick() {
-    alert("clicked");
+    alert("RSTEP");
     message = new Paho.MQTT.Message("RSTEP");
     message.destinationName = "topic/A4P/DISPENSER";
     client.send(message);
 }
 
 function onRotationCWBtnClick() {
-    alert("clicked");
+    alert("RCW");
     message = new Paho.MQTT.Message("RCW");
     message.destinationName = "topic/A4P/DISPENSER";
     client.send(message);
 }
 
 function onRotationCCWBtnClick() {
-    alert("clicked");
+    alert("RCCW");
     message = new Paho.MQTT.Message("RCCW");
     message.destinationName = "topic/A4P/DISPENSER";
     client.send(message);
 }
 
 function onRotationStopBtnClick() {
-    alert("clicked");
+    alert("RSTOP");
     message = new Paho.MQTT.Message("RSTOP");
     message.destinationName = "topic/A4P/DISPENSER";
+    client.send(message);
+}
+
+//Launcher Page
+function onLauncherBackBtnClick() {
+    location.href='configuration.html';
+}
+
+function onLauncherRunBtnClick() {
+    alert("LRUN");
+    message = new Paho.MQTT.Message("LRUN");
+    message.destinationName = "topic/A4P/LAUNCHER";
+    client.send(message);
+}
+
+function onLauncherUpBtnClick() {
+    alert("LSU");
+    message = new Paho.MQTT.Message("LSU");
+    message.destinationName = "topic/A4P/LAUNCHER";
+    client.send(message);
+}
+
+function onLauncherDownBtnClick() {
+    alert("LSD");
+    message = new Paho.MQTT.Message("LSD");
+    message.destinationName = "topic/A4P/LAUNCHER";
+    client.send(message);
+}
+
+function onLauncherStopBtnClick() {
+    alert("LSTOP");
+    message = new Paho.MQTT.Message("LSTOP");
+    message.destinationName = "topic/A4P/LAUNCHER";
     client.send(message);
 }
