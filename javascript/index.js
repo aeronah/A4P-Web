@@ -169,35 +169,35 @@ function onRotationBackBtnClick() {
 function onRotationRunBtnClick() {
     alert("RRUN");
     message = new Paho.MQTT.Message("RRUN");
-    message.destinationName = "topic/A4P/DISPENSER";
+    message.destinationName = "topic/A4P/ROTATION";
     client.send(message);
 }
 
 function onRotationStepBtnClick() {
     alert("RSTEP");
     message = new Paho.MQTT.Message("RSTEP");
-    message.destinationName = "topic/A4P/DISPENSER";
+    message.destinationName = "topic/A4P/ROTATION";
     client.send(message);
 }
 
 function onRotationCWBtnClick() {
     alert("RCW");
     message = new Paho.MQTT.Message("RCW");
-    message.destinationName = "topic/A4P/DISPENSER";
+    message.destinationName = "topic/A4P/ROTATION";
     client.send(message);
 }
 
 function onRotationCCWBtnClick() {
     alert("RCCW");
     message = new Paho.MQTT.Message("RCCW");
-    message.destinationName = "topic/A4P/DISPENSER";
+    message.destinationName = "topic/A4P/ROTATION";
     client.send(message);
 }
 
 function onRotationStopBtnClick() {
     alert("RSTOP");
     message = new Paho.MQTT.Message("RSTOP");
-    message.destinationName = "topic/A4P/DISPENSER";
+    message.destinationName = "topic/A4P/ROTATION";
     client.send(message);
 }
 
