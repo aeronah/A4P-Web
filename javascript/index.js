@@ -1,3 +1,26 @@
+client = new Paho.MQTT.Client("127.0.0.1", 9001, "ubuntu-web"); //10.42.0.1
+client.onMessageArrived = onReceive;
+
+client.connect({
+  onSuccess: onConnect,
+  onFailure: onFail
+});
+
+function onConnect() {
+  alert("connected");
+  client.subscribe("topic/WebTest");
+}
+
+function onFail() {
+  alert("failed");
+  client.connect(); // reconect if failed
+}
+
+function onReceive(msg) {
+  //received a msg
+  alert(msg.payloadString + "muahahaha");
+}
+
 // Home Page
 function onHomeStartBtnClick () {
     location.href='start.html';
@@ -96,8 +119,6 @@ function onTrainingSaveBtnClick() {
     message = new Paho.MQTT.Message(document.getElementById("difficulty").value);
     message.destinationName = "topic/A4P/DIFFICULTY";
     client.send(message);
-    //not sure if this is correct
-    //note that the value could be blank (if nothing is selected)
 }
 
 //Dispenser Page
